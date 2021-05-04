@@ -1,6 +1,7 @@
 # ts-dddsample-core
 
-エヴァンス本をTypeScript * Express版で写経。
+エヴァンス本をTypeScript * Expressで写経。
+
 練習することが目的なので設定は雑です。
 
 ## 環境構築
