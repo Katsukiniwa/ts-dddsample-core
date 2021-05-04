@@ -8,15 +8,8 @@ app.use(cookieParser());
 
 app.use(cors());
 
-app.get('/', async (request: Request, response: Response) => {
-  try {
-    response.json('Hello World');
-  } catch (error) {
-    throw new Error(error);
-  }
+app.get('/', async (_request: Request, response: Response) => {
+  response.json('Hello World');
 });
 
-app.listen(3000, () => {
-  // eslint-disable-next-line no-console
-  console.log('listening on 3000 port!');
-});
+app.listen(3000);
