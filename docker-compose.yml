@@ -1,0 +1,27 @@
+version: "3"
+services:
+  app:
+    build: ./docker/app
+    tty: true
+    command: npm run dev
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/app
+    ports:
+      - "8080:3000"
+
+  mysql:
+    build: ./docker/mysql
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: sample
+      MYSQL_USER: username
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/mysql/initdb.d:/docker-entrypoint-initdb.d
+      - ./docker/mysql/conf.d:/etc/mysql/conf.d
