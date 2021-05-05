@@ -1,3 +1,3 @@
 export interface ValueObject<T> {
-  sameIdentityAs(arg: T): boolean;
+  sameValueAs(arg: T): boolean;
 }

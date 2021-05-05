@@ -1,6 +1,9 @@
 import { Entity } from "../../shared/Entity";
 import { UnLocode } from "./UnLocode";
 
+/**
+ * 位置
+ */
 export class Location implements Entity<Location> {
   constructor(
     private _unLocode: UnLocode,
@@ -16,6 +19,6 @@ export class Location implements Entity<Location> {
   }
 
   public sameIdentityAs(other: Location) {
-    return this._unLocode.sameIdentityAs(other._unLocode);
+    return this._unLocode.sameValueAs(other._unLocode);
   }
 }

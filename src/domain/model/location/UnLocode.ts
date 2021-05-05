@@ -8,7 +8,7 @@ export class UnLocode implements ValueObject<UnLocode> {
     private unlocode: string
   ) { }
 
-  sameIdentityAs(args: UnLocode): boolean {
+  public sameValueAs(args: UnLocode): boolean {
     return this.unlocode === args.unlocode
   }
 }
